@@ -1,0 +1,72 @@
+/* Wrapper để đảm bảo có thể cuộn */
+.wrapper {
+  height: 100vh;
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  width: 100%;
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  font-size: 3rem;
+  padding-top: 40px;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  color: #ffca28;
+  text-shadow: 0 0 15px rgba(255, 202, 40, 0.7);
+}
+
+.message {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  color: #fff8e1;
+  font-weight: 500;
+}
+
+.image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 25px;
+  box-shadow:
+    0 0 35px rgba(255, 255, 255, 0.3),
+    0 0 15px rgba(255, 202, 40, 0.3);
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 45px rgba(255, 255, 255, 0.5),
+    0 0 25px rgba(255, 202, 40, 0.5);
+}
+
+.thank {
+  font-size: 1.1rem;
+  color: #ccc;
+  font-style: italic;
+  user-select: none;
+}

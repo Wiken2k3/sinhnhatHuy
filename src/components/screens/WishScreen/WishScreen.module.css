@@ -1,0 +1,151 @@
+/* Wrapper giữ nguyên */
+.wrapper {
+  min-height: 100vh;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #ffd3b6, #ff6f61);
+  padding: 2rem;
+}
+
+/* Card giữ màu và tăng độ "nổi khối" */
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(255, 111, 97, 0.4);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Tiêu đề */
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* Lời chúc */
+.message {
+  font-size: 1.25rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  color: #070707;
+  margin-bottom: 2rem;
+  animation: fadeMessage 0.6s ease;
+  min-height: 60px;
+}
+
+/* Bánh kem căn giữa chính xác */
+.cakeContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* 👈 Đảm bảo chiếm toàn bộ chiều ngang */
+}
+
+/* Bánh kem giữ nguyên màu & hiệu ứng */
+.cake {
+  position: relative;
+  width: 100px;
+  height: 120px;
+  background: linear-gradient(180deg, #f8bbd0, #c2185b);
+  border-radius: 20px 20px 10px 10px;
+  box-shadow: 0 8px 20px rgba(194, 24, 91, 0.6);
+  animation: cakeBounce 2s ease-in-out infinite;
+}
+
+/* Nến lung linh */
+.candle {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 8px;
+  height: 20px;
+  background: linear-gradient(45deg, #fff176, #fbc02d);
+  border-radius: 3px;
+  transform: translateX(-50%);
+  animation: candleFlicker 1.5s infinite;
+  box-shadow: 0 0 10px #fff59d;
+}
+
+/* Tầng bánh */
+.cakeLayer {
+  position: absolute;
+  width: 80px;
+  height: 25px;
+  background: linear-gradient(90deg, #f48fb1, #d81b60);
+  border-radius: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 3px 6px rgba(216, 27, 96, 0.5);
+}
+
+.cakeLayer:nth-child(2) { top: 20px; }
+.cakeLayer:nth-child(3) { top: 50px; }
+
+/* Đế bánh */
+.cakeBase {
+  position: absolute;
+  width: 90px;
+  height: 30px;
+  background: linear-gradient(90deg, #e1bee7, #7b1fa2);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px 15px 10px 10px;
+  box-shadow: 0 5px 10px rgba(123, 31, 162, 0.6);
+}
+
+/* Animation */
+@keyframes cakeBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes candleFlicker {
+  0%, 100% { box-shadow: 0 0 8px #fff176; }
+  50% { box-shadow: 0 0 14px #fff176; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeMessage {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Nút "tiếp tục" */
+.nextButton {
+  margin-top: 2rem;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff7043, #ff3d00);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(255, 61, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.nextButton:hover {
+  background: linear-gradient(135deg, #ff5722, #e64a19);
+  box-shadow: 0 8px 24px rgba(230, 74, 25, 0.7);
+}
+
+.nextButton:focus {
+  outline: 3px solid #ffab91;
+  outline-offset: 2px;
+}

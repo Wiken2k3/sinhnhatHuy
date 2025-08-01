@@ -1,0 +1,25 @@
+.nextButton {
+  background: linear-gradient(45deg, #ff7043, #ff5722);
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.5);
+  user-select: none;
+}
+
+.nextButton:hover:not(:disabled) {
+  background: linear-gradient(45deg, #ff5722, #e64a19);
+  box-shadow: 0 6px 20px rgba(230, 74, 25, 0.7);
+}
+
+.nextButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+  color: #666;
+}
