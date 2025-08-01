@@ -24,7 +24,7 @@
   border-radius: 20px;
   padding: 2.5rem 2rem;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
 }
 
 .title {
@@ -68,5 +68,5 @@
   font-size: 1.1rem;
   color: #ccc;
   font-style: italic;
-  user-select: none;
+  /* user-select: none; */
 }

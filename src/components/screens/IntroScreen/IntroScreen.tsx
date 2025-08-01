@@ -5,7 +5,7 @@ import ConfettiBurst from '../../effects/ConfettiBurst';
 import TypingText from '../../effects/TypingText';
 import NextButton from '../../ui/NextButton';
 import FullscreenWrapper from '../../ui/FullscreenWrapper';
-import BackgroundEffect from '../../effects/BackgroundEffect';
+// import BackgroundEffect from '../../effects/BackgroundEffect';
 import giftBoxClosed from '../../../assets/images/gift-box-closed.png';
 import giftBoxOpen from '../../../assets/images/gift-box-open.png';
 import styles from './IntroScreen.module.css';
@@ -30,7 +30,7 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ onNext }) => {
 
   return (
     <FullscreenWrapper>
-      <BackgroundEffect />
+      {/* <BackgroundEffect /> */}
       {boxOpened && <ConfettiBurst />}
 
       <div className={styles.container}>
@@ -52,7 +52,7 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ onNext }) => {
 
         {boxOpened && (
           <div className={styles.buttonWrapper}>
-            <NextButton onClick={onNext}>Mở hành trình 🎁</NextButton>
+            <NextButton onClick={onNext} label="Mở hành trình 🎁" />
           </div>
         )}
       </div>
